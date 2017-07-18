@@ -1,0 +1,16 @@
+SzámGráf;EA;H:8:00-10:00(Bolyai);Dr. Hajder Levente
+SzámGráf;GY;H:10:00-12:00(2-219);
+Logika;EA;H:14:00-16:00;Tichler Krisztián, Tejfel Máté
+Logika;GY;H:16:00-18:00(7-102);Kolonits Gábor
+Progtech2;GY;H:18:00-20:00(00-412);Nagy Krisztián
+Algo2;EA;K:10:00-12:00(Bolyai);Dr. Ásványi Tibor
+Adatbázisok1;EA;K:12:00-14:00(Bolyai);Dr. Hajas Csilla
+C++;GY;K:14:00-16:00(5-501);
+Az informatika története;EA;K:16:00-18:00(0-805);Képes Gábor László
+Analízis3;GY;SZE:8:00-10:00(1-110);
+Nummód1;EA;SZE:10:00-12:00(0-823);Dr. Krebsz Anna
+C++;EA;SZE:12:00-14:00(-1.75);Pataki Norbert
+Analízis3;EA;CS:13:00-14:00(Bolyai);Dr. Szili László
+Algo2;GY;CS:14:00-16:00(0-222);Dr. Ásványi Tibor
+Adatbázisok1;GY;CS:16:00-18:00(2-108);Brányi LászlÓ
+Progtech2;EA;P:10:00-12:00(-1.75);Szendrei Rudolf

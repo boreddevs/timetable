@@ -1,0 +1,32 @@
+Sziasztok!
+
+
+Személyes:
+Véleményem szerint egy jó GUI összerakása lesz a legnehezebb. Ha a legtöbb dolog jól működik, akkor el lehet gondolkozni egy Drag'n'Drop stílusú GUI-n. A logikára már elég határozott elképzelésem van, főleg az órák rangsorolására. Viszont nem találtam a neten semmi algoritmust erre. Persze ha a WC-n ülve rájöttök, hogy nem vittétek a telefont, nyugodtan gondolkozzatok egy olyan algón, ami hatékonyan intézi el a tárgyak rangsorolását a megadott preferenciák alapján. :)
+A legjobb az lenne, ha mindenki önállóan és csapatban egyszerre dolgozna. Munkahelyen úgyis ez az elvárás, kapsz el feladatot, egymás keze alá kell dolgozni. Egyedül, de mégis csapatban. Szerencsére úgy tűnik, hogy mindenkinek lesz munkája a nyárra, ami nagyon jó! Ez azt jelenti, hogy ilyen weekend project lesz ez. Persze ha nem lesz kész, az sem nagy érvágás.
+Tőlem interjún megkérdezték, hogy van-e saját projektem. Elmondtam az ötletet (meg hogy el sincs kezdve) és a főnököm megkérdezte a Corvinus MSc-s kollégámat, hogy mit gondol róla. Azt mondta hogy jó ötlet, és látszott, hogy mindenkinél plusz pont volt.
+Szóval interjún mondjátok még akkor is, ha nem lesz belőle semmi. :D
+
+
+
+A projektről általában:
+
+[Először Java + Swing GUI, ha sikerül, akkor tovább is lehet gondolni (C#, WPF GUI, Qt GUI, web, ...)]
+A tárgyfelvételt megkönnyítendő, jó lenne egy olyan program, ami az optimális órarendet generálja nekünk. Persze az órák felvételénél az ember sokmindent mérlegel: időpont (nap, óra), tanár, tárgy hasznossága, üres nap, stb... Nekem ezek a legfontosabbak, így ezek mentén indultam el. A továbbiakban egy tárgy előadása és gyakorlata is külön tárgynak számít!
+A cél, hogy az összes tárgyhoz generáljunk egy számot. Ez mutatja meg, hogy mennyire "kellemes" számunkra egy óra helye az órarendben. A fontossági sorrendet a user adhatná meg:
+	(x<y):= y-nak jobbak a paraméterei, mint x-nek (inkább y-t vennénk fel)
+	pl.:
+		hétfői óra <= keddi óra
+		hétfő 8-10 < kedd 8-10
+		hétfő 10-12 > kedd 8-10
+		hétfő 10-12 Java GY > kedd 8-10 Java GY
+		hétfő 10-12 Java GY, Lázár Kati <<<<<<<< kedd 8-10 Java GY, Kozsik Tamás
+		
+	De a user megadhassa, hogy keddre csak a kötelező dolgokat akarja felvenni, a tanár kevésbé számít, mint az időpont:
+	Ekkor:
+		hétfő 10-12 Java GY, Lázár Kati > kedd 8-10 Java GY, Kozsik Tamás
+
+Ehhez kell rangsorolni a felvehető órákat. Előfordulhat, hogy több egyenlő értékelésű óra is lesz azonos tárgyból. Ekkor fel kell kínálni az összes lehetőséget. Legyen lehetőség saját elfoglaltságot is bele rakni (kilőni egy időpontot, ha van más választás).
+
+Először ne kezeljük az óraütközéseket, azok megjelenítésben és a számolásban is bonyolultabbak, sokkal több a lehetőség!
+Az órák adatait ne szerverről szedjük, hanem offline generáljunk belőle JSON-t, XML-t vagy CSV-t.
